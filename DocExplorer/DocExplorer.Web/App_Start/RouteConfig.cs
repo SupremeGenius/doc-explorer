@@ -10,6 +10,13 @@ namespace DocExplorer.Web {
     public static void RegisterRoutes(RouteCollection routes) {
       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+      routes.MapRoute(
+          name: "Browsing",
+          url: "browse/{itemId}/{fileId}",
+          defaults: new { controller = "Item", action = "Browse" }
+      );
+
       routes.MapRoute(
           name: "Default",
           url: "{controller}/{action}/{id}",

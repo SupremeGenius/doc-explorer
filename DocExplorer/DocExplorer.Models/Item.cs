@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace DocExplorer.Models {
   public class Item {
 
-    public int Id { get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public Guid Id { get; set; }
     
     [Required]
     [StringLength(255)]
