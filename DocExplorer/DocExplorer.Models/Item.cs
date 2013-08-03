@@ -24,6 +24,7 @@ namespace DocExplorer.Models {
 
     public Item() {
       FileItems = new HashSet<FileItem>();
+      DateCreated = DateTime.Now;
     }
   }
 }

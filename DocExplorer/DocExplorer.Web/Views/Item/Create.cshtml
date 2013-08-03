@@ -1,22 +1,28 @@
-﻿@{
+﻿@using DocExplorer.Models
+@model Item
+
+@{
   ViewBag.Title = "Create";
 }
 
 <div class="row">
   <div class="columns">
-    <div class="panelx">
-      @using (Html.BeginForm()) {
+    <div>
+      @using (Html.BeginForm( "Create", "Item", FormMethod.Post,new{enctype="multipart/form-data"})) {
+        @Html.AntiForgeryToken()
         <div class="panel">
           <div>
-            <input type="text" name="Title" placeholder="Item's title..." />
+            @Html.TextBoxFor(m => m.Title, new { placeholder = "Item's title..." })
+            <span>@Html.ValidationMessageFor(m => m.Title)</span>
           </div>
           <div>
             <input type="file" name="uploadFile" />
+            <div>@Html.ValidationMessage("uploadFile")</div>
           </div>
-          <div>
+          <div style="margin-top: 15px;">
             <button type="submit" class="success small radius button">
               Add Item
-            </button> 
+            </button>
           </div>
         </div>
       }

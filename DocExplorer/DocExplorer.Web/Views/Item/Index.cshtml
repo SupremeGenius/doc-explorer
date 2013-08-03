@@ -6,19 +6,22 @@
   ViewBag.Title = "Browse";
 }
 
-<div class="row">
+@*<div class="row">
   <div class="columns">
-    <a href="@Url.Action("Create")" class="small radius button">Create</a> 
+    <a href="@Url.Action("Create")" class="small radius button">Create</a>
     <div>
       <strong>Total:</strong> @Model.Count() items.
     </div>
-    <div class="large-block-grid-5">
-      <ul>
-        @foreach (var item in Model) {
-          <li>@item.Title</li>
-        }
-      </ul>
-    </div>
+  </div>
+</div> *@
+<div class="row">
+  <div class="columns">
+    <ul class="large-block-grid-5">
+      @foreach (var item in Model) {
+        <li>
+          <div class="panel">@item.Title</div>
+        </li>
+      }
+    </ul>
   </div>
 </div>
-

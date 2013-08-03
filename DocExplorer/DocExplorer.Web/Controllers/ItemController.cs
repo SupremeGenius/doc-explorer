@@ -27,8 +27,18 @@ namespace DocExplorer.Web.Controllers {
     }
 
     [HttpPost]
-    public ActionResult Create(Item item) {
-      return View();
+    [ValidateAntiForgeryToken]
+    public ActionResult Create(Item item, HttpPostedFileBase uploadFile) {
+      if (uploadFile == null) {
+        ModelState.AddModelError("uploadFile", "Please choose a file to upload with");
+      }
+      if (ModelState.IsValid) {
+        db.Items.Add(item);
+        db.SaveChanges();
+
+        return RedirectToAction("Index");
+      }
+      return View(item);
     }
 
     public ActionResult Edit() {
