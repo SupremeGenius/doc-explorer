@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocExplorer.Web", "DocExplorer.Web\DocExplorer.Web.csproj", "{653C2A37-4607-43F3-9BAB-23128369C6A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocExplorer.Models", "DocExplorer.Models\DocExplorer.Models.csproj", "{55BF1007-4ED8-48F1-91FB-221505C32762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{653C2A37-4607-43F3-9BAB-23128369C6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653C2A37-4607-43F3-9BAB-23128369C6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653C2A37-4607-43F3-9BAB-23128369C6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BF1007-4ED8-48F1-91FB-221505C32762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BF1007-4ED8-48F1-91FB-221505C32762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BF1007-4ED8-48F1-91FB-221505C32762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BF1007-4ED8-48F1-91FB-221505C32762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
